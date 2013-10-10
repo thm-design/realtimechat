@@ -1,0 +1,19 @@
+{
+  "name": "realtimechat",
+  "version": "0.0.1",
+  "private": true,
+  "description": "real time chat with angluarfire",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node scripts/web-server.js",
+    "predeploy": "echo This will be run before deploying the app",
+    "postdeploy": "echo This will be run after deploying the app"
+  },
+   "main": "app/index.html",
+    "engines": {
+    "node": "0.10.12",
+    "npm": "1.2.30"
+  }
+}
