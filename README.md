@@ -1,6 +1,6 @@
 # Realtime chat
 
-This is an implementation of php CURL requesting made with Angluar JS, node JS and firebase. Mostly a learning and hacking experiment for now.
+Real time chat with client only tech.
 
 
 # angular-seed — the seed for AngularFire apps
