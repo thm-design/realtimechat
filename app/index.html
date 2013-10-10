@@ -30,7 +30,7 @@
     <label style="white-space: nowrap;" for="">Your name: </label><input id="name" type="text" ng-model="username">
   </div>
   <p></p>
-  <div id="messagesDiv" auto-scroll="messages" style="height:500px; background:#232527; color:#CFCFCF; padding:10px;">
+  <div id="messagesDiv" auto-scroll="messages" style="background:#232527; color:#CFCFCF; padding:10px;">
     <div ng-cloak ng-repeat="message in messages">
       <em>{{message.from}}: </em>{{message.content}}
     </div>
