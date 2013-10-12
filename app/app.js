@@ -5,7 +5,13 @@ angular.module('chat', ['firebase','ui.router'])
       $scope.messages = angularFireCollection(new Firebase(url).limit(20));
       $scope.username = 'Guest' + Math.floor(Math.random()*101);
       $scope.addMessage = function() {
-        $scope.messages.add({from: $scope.username, content: $scope.message});
+        var user = localStorage.getItem('user');
+        if (user){
+          $scope.messages.add({from: user, content: $scope.message});
+        } 
+        else {
+          $scope.messages.add({from: $scope.username, content: $scope.message});
+        }
         $scope.message = "";
       }
     }

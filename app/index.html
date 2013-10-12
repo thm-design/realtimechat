@@ -76,7 +76,7 @@
       } else if (user) {
         // user authenticated with Firebase
         //console.dir('User ID: ' + user.id);
-        //localStorage.setItem('token', 'Twitlog');
+        localStorage.setItem('user', user.name);
         isLoggedIn = true;
 
         console.log('Logged In');
@@ -88,7 +88,7 @@
 
       } else {
         // user is logged out
-        //localStorage.clear();
+        localStorage.clear();
         isLoggedIn = false;
         console.log('logged out!');
         $('#logout').hide();
