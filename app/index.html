@@ -82,10 +82,6 @@
   
   <script type="text/javascript">
     var href = document.location.href;
-    if (href.indexOf('localhost') < 0 && href.indexOf('127.0.0.1') < 0 && href.indexOf('github.com') < 0 && href.indexOf('github.io') < 0) {
-      alert('Sorry! This is configured to allow authentication only from http://localhost, http://*.github.com, or http://*.github.io.');
-    }
-  
     // FirebaseSimpleLogin instantiation
     var firebaseRef = new Firebase("https://realtimechat.firebaseio.com");
     var auth = new FirebaseSimpleLogin(firebaseRef, function(error, user) {
