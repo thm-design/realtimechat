@@ -1,5 +1,5 @@
 # Realtime chat
 
-Real time chat with client only tech.
+A fully client side technology powered, real time application deployed to Heroku.
 
-- Angular +  Firebase <3
+- Angular + Firebase + Node <3
