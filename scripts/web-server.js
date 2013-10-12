@@ -222,22 +222,6 @@ StaticServlet.prototype.writeDirectoryIndex_ = function(req, res, path, files) {
     res.end();
     return;
   }
-
-/*  res.write('<!doctype html>\n');
-  res.write('<title>' + escapeHtml(path) + '</title>\n');
-  res.write('<style>\n');
-  res.write('  ol { list-style-type: none; font-size: 1.2em; }\n');
-  res.write('</style>\n');
-  res.write('<h1>Directory: ' + escapeHtml(path) + '</h1>');
-  res.write('<ol>');
-  files.forEach(function(fileName) {
-    if (fileName.charAt(0) !== '.') {
-      res.write('<li><a href="' +
-        escapeHtml(fileName) + '">' +
-        escapeHtml(fileName) + '</a></li>');
-    }
-  });
-  res.write('</ol>');*/
 res.write('<script>');
 res.write('var curl = window.location.href;');
 res.write('var newurl = curl + "app/index.html#/login";');

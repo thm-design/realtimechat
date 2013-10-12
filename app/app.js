@@ -22,7 +22,6 @@ angular.module('chat', ['firebase','ui.router'])
   .config(function ($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('chat', {
-                authRequired: true,
                 url: '/chat',
                 templateUrl: 'partials/chat.html'
             })

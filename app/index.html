@@ -15,7 +15,7 @@
   
 </head>
 <noscript><p>Warning: This needs JavaScript enabled to work.</p></noscript>
-<body ng-controller="Chat">
+<body>
     <header>
     <section id="title" class="container masthead">
       <div class="row">
@@ -31,7 +31,7 @@
     <div class="row">
       <div class="span12">
          <p>Welcome to Basechat, <a href="http://basechat.herokuapp.com/" target="_blank">open</a> this window in another device and watch the real-time chat goodness go!</p>
-        <span id="logout">You are signed in with Twitter: <a href="javascript:auth.logout();">logout</a></span>
+        <span id="logout">Signed in as: <span id="user-name"></span> <a href="javascript:auth.logout();" style="float:right">Sign out</a></span>
       </div>
     </div>
   </section>
@@ -42,27 +42,6 @@
       </div>
     </div>
   </section>
-  
-  <!--section class="container">
-    <div class="row">
-      <div class="span12">
-        <div>
-          <label style="white-space: nowrap;" for="">Your name: </label><input id="name" type="text" ng-model="username">
-        </div>
-        <p></p>
-        <div id="messagesDiv" auto-scroll="messages" style="background:#232527; color:#CFCFCF; padding:10px;">
-          <div ng-cloak ng-repeat="message in messages">
-            <em>{{message.from}}: </em>{{message.content}}
-          </div>
-        </div>
-        <p></p>
-        <form ng-submit="addMessage()">
-          <input id="message" type="text" ng-model="message" placeholder="Message...">
-          <input class="btn round medium" id="send" type="submit" id="submit" value="Send">
-        </form>
-      </div>
-    </div>
-  </section-->
   <!-- Start Footer -->
   <section class="container">
   <footer>
@@ -79,7 +58,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/0.2.0/angularfire.min.js"></script>
   <script type="text/javascript" src="https://cdn.firebase.com/v0/firebase-simple-login.js"></script>
   <script src="angular-ui-router.min.js"></script>
-  
+  <script src="app.js"></script>
   <script type="text/javascript">
     var href = document.location.href;
     // FirebaseSimpleLogin instantiation
@@ -90,15 +69,24 @@
         console.log(error);
       } else if (user) {
         // user authenticated with Firebase
-        console.log('logged in!');
-        
+        //console.dir('User ID: ' + user.id);
+       
+        localStorage.setItem('token', 'Twitlog');
+        isLoggedIn = true;
+
+        console.log('Logged In', user.name);
+        $('#user-name').text(user.name);
+
         $('#logout').show();
-        location.href='http://basechat.herokuapp.com/app/index.html#/chat';
+        location.href='#/chat';
 
       } else {
         // user is logged out
+        localStorage.clear();
+        isLoggedIn = false;
         console.log('logged out!');
         $('#logout').hide();
+        window.location.href = "#/login";
   
       }
     });
@@ -106,6 +94,6 @@
       auth.login(provider);
     }
   </script>
-  <script src="app.js"></script>
+  
 </body>
 </html>
