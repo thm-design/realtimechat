@@ -1,0 +1,5 @@
+.sass-cache
+.DS_Store
+/docs
+sftp-config.json
+/app/scss
