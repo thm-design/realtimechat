@@ -1,0 +1,20 @@
+<section class="container">
+    <div class="row">
+      <div class="span12">
+        <div>
+          <label style="white-space: nowrap;" for="">Your name: </label><input id="name" type="text" ng-model="username">
+        </div>
+        <p></p>
+        <div id="messagesDiv" auto-scroll="messages" style="background:#232527; color:#CFCFCF; padding:10px;">
+          <div ng-cloak ng-repeat="message in messages">
+            <em>{{message.from}}: </em>{{message.content}}
+          </div>
+        </div>
+        <p></p>
+        <form ng-submit="addMessage()">
+          <input id="message" type="text" ng-model="message" placeholder="Message...">
+          <input class="btn round medium" id="send" type="submit" id="submit" value="Send">
+        </form>
+      </div>
+    </div>
+  </section>

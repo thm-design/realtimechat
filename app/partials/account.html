@@ -1,0 +1,51 @@
+<section class="container ptop150">
+<div class="row">
+<div>
+<span ng-show="auth"><a href="#/view1">Back</a></span><br />
+<h2>Account</h2>
+</div>
+<div class="span6">
+<form>
+    <fieldset>
+        <legend>Profile</legend>
+
+        <label>
+            <span>Name:</span>
+            <input type="text" name="name" ng-model="user.name"/>
+        </label>
+
+        <label>
+            <span>Email:</span>
+            <input type="text" name="name" ng-model="user.email"/>
+        </label>
+    </fieldset>
+</div>
+<div class="span6">
+    <fieldset>
+        <legend>Change Password</legend>
+
+        <label>
+            <span>Old Password:</span>
+            <input type="password" ng-model="oldpass"/>
+        </label>
+
+        <label>
+            <span>New Password:</span>
+            <input type="password" ng-model="newpass"/>
+        </label>
+
+        <label>
+            <span>Confirm Password:</span>
+            <input type="password" ng-model="confirm"/>
+        </label>
+
+        <button class="btn round medium" ng-click="updatePassword()">update password</button>
+
+        <p class="error" ng-show="err">{{err}}</p>
+        <p class="good" ng-show="msg">{{msg}}</p>
+    </fieldset>
+</form>
+</div>
+<button class="btn round medium" ng-click="logout()">Log Out</button>
+ </div>
+</section>

@@ -1,4 +1,4 @@
-angular.module('chat', ['firebase'])
+angular.module('chat', ['firebase','ui.router'])
   .controller('Chat', ['$scope', '$timeout', 'angularFireCollection',
     function($scope, $timeout, angularFireCollection) {
       var url = 'https://realtimechat.firebaseio.com/';
@@ -18,4 +18,18 @@ angular.module('chat', ['firebase'])
         });
       });
     }
+  })
+  .config(function ($stateProvider, $urlRouterProvider) {
+        $stateProvider
+            .state('chat', {
+                authRequired: true,
+                url: '/chat',
+                templateUrl: 'partials/chat.html'
+            })
+            .state('login', {
+                url: '/login',
+                templateUrl: 'partials/login.html'
+            })
+            .state("otherwise", { url : '/login'
+            });
   });

@@ -10,7 +10,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="stylesheet" href="scss/css/sbase.css">
   <link rel="icon" type="image/png" href="favicon.png" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" ></script>
   <script src="angular.js"></script>
+  
 </head>
 <noscript><p>Warning: This needs JavaScript enabled to work.</p></noscript>
 <body ng-controller="Chat">
@@ -24,14 +26,24 @@
       </div>
     </section>
   </header>
+  
   <section class="intro container ptop150">
     <div class="row">
       <div class="span12">
          <p>Welcome to Basechat, <a href="http://basechat.herokuapp.com/" target="_blank">open</a> this window in another device and watch the real-time chat goodness go!</p>
+        <span id="logout">You are signed in with Twitter: <a href="javascript:auth.logout();">logout</a></span>
       </div>
     </div>
   </section>
   <section class="container">
+    <div class="row">
+      <div class="span12">
+        <div ui-view></div>
+      </div>
+    </div>
+  </section>
+  
+  <!--section class="container">
     <div class="row">
       <div class="span12">
         <div>
@@ -50,7 +62,7 @@
         </form>
       </div>
     </div>
-  </section>
+  </section-->
   <!-- Start Footer -->
   <section class="container">
   <footer>
@@ -65,6 +77,38 @@
   <!-- End Footer -->
   <script src="https://cdn.firebase.com/v0/firebase.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/0.2.0/angularfire.min.js"></script>
+  <script type="text/javascript" src="https://cdn.firebase.com/v0/firebase-simple-login.js"></script>
+  <script src="angular-ui-router.min.js"></script>
+  
+  <script type="text/javascript">
+    var href = document.location.href;
+    if (href.indexOf('localhost') < 0 && href.indexOf('127.0.0.1') < 0 && href.indexOf('github.com') < 0 && href.indexOf('github.io') < 0) {
+      alert('Sorry! This is configured to allow authentication only from http://localhost, http://*.github.com, or http://*.github.io.');
+    }
+  
+    // FirebaseSimpleLogin instantiation
+    var firebaseRef = new Firebase("https://realtimechat.firebaseio.com");
+    var auth = new FirebaseSimpleLogin(firebaseRef, function(error, user) {
+      if (error) {
+        // an error occurred while attempting login
+        console.log(error);
+      } else if (user) {
+        // user authenticated with Firebase
+        console.log('logged in!');
+        console.log('User ID: ' + user.id + ', Provider: ' + user.provider);
+        $('#logout').show();
+
+      } else {
+        // user is logged out
+        console.log('logged out!');
+        $('#logout').hide();
+  
+      }
+    });
+    function login(provider) {
+      auth.login(provider);
+    }
+  </script>
   <script src="app.js"></script>
 </body>
 </html>
