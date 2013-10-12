@@ -6,17 +6,17 @@
   "directories": {
     "test": "test"
   },
+  "dependencies": {
+    "ui-router": "https://github.com/angular-ui/ui-router.git"
+    },
   "scripts": {
-    "start": "node scripts/web-server.js",
-    "predeploy": "echo This will be run before deploying the app",
-    "postdeploy": "echo This will be run after deploying the app"
+    "start": "node scripts/web-server.js"
   },
   "repository" : { 
     "type" : "git",
     "url" : "https://github.com/thm-design/realtimechat"
   },
-   "main": "app/index.html",
-    "engines": {
+  "engines": {
     "node": "0.10.12",
     "npm": "1.2.30"
   }
