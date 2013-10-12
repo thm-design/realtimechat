@@ -1,7 +1,7 @@
 angular.module('chat', ['firebase','ui.router'])
   .controller('Chat', ['$scope', '$timeout', 'angularFireCollection',
     function($scope, $timeout, angularFireCollection) {
-      var url = 'https://realtimechat.firebaseio.com/';
+      var url = 'your firebase url';
       $scope.messages = angularFireCollection(new Firebase(url).limit(20));
       $scope.username = 'Guest' + Math.floor(Math.random()*101);
       $scope.addMessage = function() {
