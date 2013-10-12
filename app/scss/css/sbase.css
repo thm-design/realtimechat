@@ -6239,3 +6239,10 @@ ul.icons li .icon-large:before {
   .telephone, .e-mail {
     letter-spacing: -1px; } }
 /* Media Queries (Responsive Layouts) */
+
+#messagesDiv { min-height: 300px; }
+
+@media (max-width: 767px) { 
+  #messagesDiv { min-height: 30px; }
+  .ptop150 { padding-top: 11px; }
+}

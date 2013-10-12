@@ -24,11 +24,7 @@
       </div>
     </section>
   </header>
-  <section id="title" class="container ptop150">
-    <div class="row">
-    </div>
-  </section>
-  <section class="intro container">
+  <section class="intro container ptop150">
     <div class="row">
       <div class="span12">
          <p>Welcome to Basechat, <a href="http://basechat.herokuapp.com/" target="_blank">open</a> this window in another device and watch the real-time chat goodness go!.</p>
@@ -36,26 +32,27 @@
     </div>
   </section>
   <section class="container">
-  <div class="row">
-  <div>
-    <label style="white-space: nowrap;" for="">Your name: </label><input id="name" type="text" ng-model="username">
-  </div>
-  <p></p>
-  <div id="messagesDiv" auto-scroll="messages" style="background:#232527; color:#CFCFCF; padding:10px;">
-    <div ng-cloak ng-repeat="message in messages">
-      <em>{{message.from}}: </em>{{message.content}}
+    <div class="row">
+      <div class="span12">
+        <div>
+          <label style="white-space: nowrap;" for="">Your name: </label><input id="name" type="text" ng-model="username">
+        </div>
+        <p></p>
+        <div id="messagesDiv" auto-scroll="messages" style="background:#232527; color:#CFCFCF; padding:10px;">
+          <div ng-cloak ng-repeat="message in messages">
+            <em>{{message.from}}: </em>{{message.content}}
+          </div>
+        </div>
+        <p></p>
+        <form ng-submit="addMessage()">
+          <input id="message" type="text" ng-model="message" placeholder="Message...">
+          <input class="btn round medium" id="send" type="submit" id="submit" value="Send">
+        </form>
+      </div>
     </div>
-  </div>
-  <p></p>
-  <form ng-submit="addMessage()">
-    <input id="message" type="text" ng-model="message" placeholder="Message...">
-    <input class="btn round medium" id="send" type="submit" id="submit" value="Send">
-  </form>
-  </div>
   </section>
   <!-- Start Footer -->
   <section class="container">
-  <div class="row">
   <footer>
       <div class="row">
         <div class="span12">
@@ -64,7 +61,6 @@
         </div>
       </div>
     </footer>
-  </div>
   </section>
   <!-- End Footer -->
   <script src="https://cdn.firebase.com/v0/firebase.js"></script>
