@@ -11,6 +11,10 @@
     "predeploy": "echo This will be run before deploying the app",
     "postdeploy": "echo This will be run after deploying the app"
   },
+  "repository" : { 
+    "type" : "git",
+    "url" : "https://github.com/thm-design/realtimechat"
+  },
    "main": "app/index.html",
     "engines": {
     "node": "0.10.12",
