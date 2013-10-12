@@ -6,11 +6,10 @@
   "directories": {
     "test": "test"
   },
-  "dependencies": {
-    "ui-router": "https://github.com/angular-ui/ui-router.git"
-    },
   "scripts": {
-    "start": "node scripts/web-server.js"
+    "start": "node scripts/web-server.js",
+    "predeploy": "echo This will be run before deploying the app",
+    "postdeploy": "echo This will be run after deploying the app"
   },
   "repository" : { 
     "type" : "git",
