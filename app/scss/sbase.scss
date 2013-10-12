@@ -1,0 +1,557 @@
+@import 'normalize';				/* CSS Resets */
+
+.masthead {
+	margin-top: 0px!important;
+	padding-top: 13px;
+}
+
+.masthead h1 {
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+.masthead p {	
+	font-size: 14px!important;
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+	line-height: 1.5em!important;
+	letter-spacing: 0!important;
+	padding: 0!important;
+}
+
+.masthead .span12 {
+	border: none!important;
+} 	
+
+a:hover, a:focus { color: #656a71; }
+
+fieldset {
+	border: none;
+}
+
+	.log-title {
+		font-size: 25px;
+		color: #f5c11e;
+		font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		font-weight: bold;
+		line-height: 1.1;
+		letter-spacing: -1px;
+		-webkit-font-smoothing: antialiased;
+		padding: 13px;
+		margin-bottom: 0;
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+		background: rgba(35, 37, 39, 0.62);
+	}
+	.log-text {
+		font-size: 15px;
+		color: white;
+		padding: 13px;
+		background-color: #232527;
+	}
+
+	.stamp {
+		float: right;
+		padding-right: 30px;
+		padding-top: 4px;
+		margin-bottom: 0;
+		color: #fff;
+		font-size: 17px;
+		font-weight: normal;
+	}
+
+
+/*========================*/
+
+/*=== Structure Styles ===*/
+
+/*========================*/
+
+#footer {
+	width:600px;
+	margin:0 auto;
+	padding:10px 0 0 0;
+	font-size:12px;
+	color:#999;
+}
+
+#footer a {
+	color:#999;
+	text-decoration:underline;
+}
+
+
+
+li span {
+	color:#000;
+}
+
+
+
+li span.name {
+	display:inline-block;
+	width:320px;
+	margin-right:30px;
+	font-weight:bold;
+}
+
+li span.url {
+	display:inline;
+	width:auto;
+}
+
+li span.up {
+	display:block;
+	width:48px;
+	height:48px;
+	float:left;
+	margin:-11px 10px 0 0;
+}
+
+li span.id {
+	display:none;
+}
+
+
+
+li span.status {
+	float: right;
+	padding-right: 20px;
+}
+
+
+
+li span.status span {
+	display:inline-block;
+	line-height:16px;
+	cursor:help;
+	float: right;
+}
+
+
+
+a#add-site {
+	float:right;
+}
+
+a#do-check {
+	color:#333;
+}
+
+
+
+a.remove {
+	display:inline-block;
+	width:16px;
+	height:16px;
+	background:url(images/close_16.png) no-repeat;
+	text-indent:-9999px;
+	margin-top:3px;
+	cursor:pointer;
+}
+
+li:hover a.remove {
+
+	/*display:block;*/
+
+}
+
+
+
+.tooltip{ 
+	position:absolute; 
+	top:0; 
+	left:0; 
+	z-index:1000; 
+	display: none; 
+	background:#fff url(images/table_head_back.png) repeat-x;
+	border:1px solid #ccc;
+	padding:2px 8px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+
+
+
+.jqmWindow {
+    display: none;
+    position: fixed;
+    top:150px;
+    left:50%;
+    width: 600px;
+    margin-left:-300px;
+    background:#181818;
+    border:1px solid #666;
+    padding:20px;
+}
+
+
+
+/*===================*/
+
+/*=== List Styles ===*/
+
+/*===================*/
+
+ul.list {
+	list-style:none;
+	margin:0;
+	padding:0;
+	background:#ddd;
+	border:1px solid #ccc;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	width: auto;
+}
+
+ul.list li {
+	padding:15px;
+	border-bottom:1px solid #ccc;
+}
+
+ul.list li.last, ul.list li:last-child {
+	border-bottom:0;
+}
+
+ul.list li.title {
+	text-transform:uppercase;
+	font-weight:bold;
+	font-size:0.8em;
+	background:#F4F4F4 url(images/table_head_back.png) repeat-x;
+	-moz-border-radius-topleft:5px;
+	-webkit-border-top-left-radius:5px;
+	-moz-border-radius-topright:5px;
+	-webkit-border-top-right-radius:5px;
+	color: #000;
+}
+
+
+
+ul.list.sub {
+	margin-top:10px;
+}
+
+
+header {
+	height: 90px!important;
+	//background-color: transparent!important;
+}
+
+
+/*====================*/
+
+/*=== Input Styles ===*/
+
+/*====================*/
+
+label {
+	width:50px;
+}
+
+input,
+
+textarea,
+
+select {
+	padding:5px;
+	font:400 1em Verdana, Sans-serif;
+	color:#666;
+	background:#fff;
+	border:1px solid #999;
+	margin:4px 2px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+}
+
+
+#add-site-form input {
+	width:90%;	max-width: 300px;
+
+}
+
+#add-site-form input.button {
+	width:auto;
+} 
+
+
+
+/*====================*/
+
+/*=== Other Styles ===*/
+
+/*====================*/
+
+.clear {
+	clear:both;
+}
+
+
+img {
+	-ms-interpolation-mode:bicubic;
+}
+
+strong, b {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* iOS fix for Helvetica Neue Light */
+	-webkit-font-smoothing: antialiased;
+}
+
+	
+
+	h1, h2, h3, h4, h5, h6 { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: bold; color: white; text-rendering: optimizelegibility; -webkit-font-smoothing: antialiased; margin: 0 0 0.6em 0; }
+
+	h1, h2 { letter-spacing: -2px; line-height: 1.1; }
+
+	h3, h4, h5 { letter-spacing: -1px; line-height: 1.1; }
+
+	h1 { font-size: 60px; }
+
+	h2 { font-size: 56px; }
+
+	h3 { font-size: 48px; }
+
+	h4 { font-size: 32px; }
+
+	h5 { font-size: 24px; }
+
+	h6 { font-size: 18px; }
+
+	p + h1, p + h2, p + h3, p + h4, p + h5, p + h6 { margin-top: 1.2em; }
+
+.social {
+	width: 170px;
+}	
+
+/* --------- Desktop --------- */
+
+@media (min-width: 1200px) {
+
+
+
+	.profile-wrp { width: 270px; margin-left: 30px; }
+
+	.profile-wrp .overlay-wrp .profile-quote { font-size: 28px; }
+
+	
+
+	.process-wrp { width: 180px; height: 180px; margin: 0 25px 20px 25px; }
+
+	.process-circle { font-size: 24px; }
+
+	.process-circle span { width: 180px; height: 180px; }
+
+	
+
+	.img-caption { width: 50%; margin-left: 50%; }
+
+	
+
+}
+
+/* --------- fixed header --------- */
+
+@media (min-width: 768px) {
+
+header { 
+	background: #232527!important; 
+	z-index: 99; 
+	position: fixed!important; 
+	right: 0; 
+	left: 0;
+	top: 0;
+	height: 100px;
+ }
+
+.ptop150 {
+	padding-top: 150px;
+}
+
+
+}
+
+
+
+/* --------- iPad Vertical --------- */
+
+
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+
+
+
+
+}
+
+
+
+/* --------- Mobile Phones --------- */
+
+@media (max-width: 767px) {
+
+	.log-title {
+		font-size: 18px;
+		padding: 12px 13px 30px 13px;
+	}
+	.log-text {
+		font-size: 13px;
+	}
+	.stamp {
+		float: left;
+		padding: 13px;
+		margin-bottom: 0;
+		padding-left: 0;
+		margin-top: -11px;
+		font-size: 13px;
+	}
+
+
+
+	h1 { 
+		font-size: 38px; 
+	}
+
+	h2 { 
+		font-size: 38px; 
+	}
+
+	a#add-site {
+		float: none;
+		width: auto;
+		position: relative;
+		display: block;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+
+	li span.name {
+		display: inline-block;
+		width: auto;
+		margin-right: 30px;
+		font-weight: bold;
+	}
+
+	.jqmWindow {
+		width: 250px;
+		margin-left: -146px;
+		top: 20px;
+	}
+
+	#do-check, #add-site {
+		width: 100%;
+	}
+
+	#wrapper h1 { font-size: 48px; }
+
+	h2 { font-size: 44px; }
+
+	h3 { font-size: 38px; padding-top: 0.4em; }
+
+	h4 { font-size: 26px; padding-top: 0.4em; }
+
+	h5 { font-size: 22px; padding-top: 0.4em; }
+
+	h6 { font-size: 16px; }
+
+	p:last-child { margin-bottom: 1.6em; }
+
+	p.large { font-size: 14px; }
+
+	p.lead { font-size: 18px; }
+
+	#wrapper{ padding:5%;}
+
+	#footer { width: 90%; margin-top: 40px; margin-bottom: 15px; padding:5%;}
+
+	#title { margin-top: 34px; margin-bottom: 33px; }
+
+	.jqmWindow {
+		width: 250px;
+		margin-left: -125px;
+	}
+
+
+
+}
+
+
+
+/* --------- iPhone Vertical  --------- */
+
+@media (max-width: 479px) {
+
+	h1 { 
+		font-size: 38px; 
+	}
+
+	h2 { 
+		font-size: 38px; 
+	}
+
+	.log-title {
+		padding: 12px 13px 30px 13px;
+	}
+
+	.stamp {
+		float: left;
+		padding: 13px;
+		margin-bottom: 0;
+		padding-left: 0;
+		margin-top: -11px;
+		font-size: 13px;
+	}
+
+
+	a#add-site {
+		float: none;
+		width: auto;
+		position: relative;
+		display: block;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+
+	li span.name {
+		display: inline-block;
+		width: auto;
+		margin-right: 30px;
+		font-weight: bold;
+	}
+
+	.jqmWindow {
+		width: 250px;
+		margin-left: -146px;
+		top: 20px;
+	}
+
+	#do-check, #add-site {
+		width: 100%;
+	}
+
+	li span.status {
+
+		float: right;
+		padding-right:0px;
+	}
+
+	li span.status span {
+
+	display:inline-block;
+
+	line-height:16px;
+
+	background:none;
+
+	padding-right:0px;
+
+	float: right;
+
+}
+
+}
+
+@import 'layout';				/* Main Styles */
+@import 'shortcodes';          	/* Shortcodes */
+@import 'grid';					/* Twitter Bootstrap Grid */
+@import 'fontawesome';        	/* Custom Icons */
+@import 'mediaqueries';        	/* Media Queries (Responsive Layouts) */
