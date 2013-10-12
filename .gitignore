@@ -2,4 +2,4 @@
 .DS_Store
 /docs
 sftp-config.json
-/app/scss
+/scss
