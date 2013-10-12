@@ -61,6 +61,12 @@
   <script src="app.js"></script>
   <script type="text/javascript">
     var href = document.location.href;
+    var isLoggedIn = false;
+    var securet = 'http://basechat.herokuapp.com/app/index.html#/chat';
+    if ((window.location.href == securet) && (isLoggedIn == false)) {
+        window.location.href = "#/login";
+    }
+
     // FirebaseSimpleLogin instantiation
     var firebaseRef = new Firebase("https://realtimechat.firebaseio.com");
     var auth = new FirebaseSimpleLogin(firebaseRef, function(error, user) {
@@ -70,19 +76,19 @@
       } else if (user) {
         // user authenticated with Firebase
         //console.dir('User ID: ' + user.id);
-       
-        localStorage.setItem('token', 'Twitlog');
+        //localStorage.setItem('token', 'Twitlog');
         isLoggedIn = true;
 
-        console.log('Logged In', user.name);
+        console.log('Logged In');
         $('#user-name').text(user.name);
 
+
         $('#logout').show();
-        location.href='#/chat';
+        window.location.href='#/chat';
 
       } else {
         // user is logged out
-        localStorage.clear();
+        //localStorage.clear();
         isLoggedIn = false;
         console.log('logged out!');
         $('#logout').hide();
