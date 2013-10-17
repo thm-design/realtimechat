@@ -222,11 +222,11 @@ StaticServlet.prototype.writeDirectoryIndex_ = function(req, res, path, files) {
     res.end();
     return;
   }
-res.write('<script>');
-res.write('var curl = window.location.href;');
-res.write('var newurl = curl + "app/index.html#/login";');
-res.write('window.location = newurl;');
-res.write('</script>');
+  res.write('<script>');
+  res.write('var curl = window.location.href;');
+  res.write('var newurl = curl + "app/index.html#/login";');
+  res.write('window.location = newurl;');
+  res.write('</script>');
   res.end();
 };
 
